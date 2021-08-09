@@ -31,12 +31,52 @@ top: 0;
 bottom: 0;
 width: 100%;
 }
+
+.legend {
+background-color: #fff;
+border-radius: 3px;
+bottom: 30px;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+padding: 10px;
+position: absolute;
+right: 10px;
+z-index: 1;
+}
+
+.legend h4 {
+margin: 0 0 10px;
+}
+
+.legend div span {
+border-radius: 50%;
+display: inline-block;
+height: 10px;
+margin-right: 5px;
+width: 10px;
+z-index: 9999;
+}
 </style>
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js"></script>
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css" type="text/css">
 <div id="comparison-container">
 <div id="before" class="map"></div>
 <div id="after" class="map"></div>
+<div id="state-legend" class="legend">
+<h4>Hectares Cultivated – 2019</h4>
+<div><span style="background-color: #0f4d27"></span>> 300</div>
+<div><span style="background-color: #289806"></span>100 – 300</div>
+<div><span style="background-color: #2aa305"></span>20 – 100</div>
+<div><span style="background-color: #54fd21"></span>0 – 20</div>
+<div><span style="background-color: #dedede"></span>0</div>
+<h4>Per Capita Violent Incidents – 2019</h4>
+<div><span style="background-color: #da9c20"></span>100</div>
+<div><span style="background-color: #e6b71e"></span>25 – 100</div>
+<div><span style="background-color: #eed322"></span>10 – 25</div>
+<div><span style="background-color: #f2f12d"></span>5 – 10</div>
+<div><span style="background-color: #ffb8b8"></span>0 – 5</div>
+<div><span style="background-color: #dedede"></span>0</div>
+</div>
 </div>
 <script>
 	// TO MAKE THE MAP APPEAR YOU MUST
